@@ -34,7 +34,7 @@
 // console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
 // storage.removeItem("Droid");
 // console.log(storage.getItems());
-
+// ================================================================================================ //
 
 //    Напиши класс StringBuilder
 // Объяви следующие методы класса:
@@ -86,7 +86,7 @@
 //    console.log(builder.getValue()); // "^.^"
 //    builder.padBoth("=");
 //    console.log(builder.getValue()); // "=^.^="
-
+// =========================================================================================== //
 
 // Статические методы
 
@@ -115,7 +115,7 @@
   
 //   console.log(Car.checkPrice(audi.price)); // "Success! Price is within acceptable limits"
 //   console.log(Car.checkPrice(bmw.price)); // "Error! Price exceeds the maximum"
-
+// ============================================================================================ //
 
 // Конструктор дочернего класса
 // Добавь классу Admin метод constructor, который принимает один параметр - объект настроек с двумя свойствами email и accessLevel.
@@ -158,7 +158,7 @@
   
 //   console.log(mango.email); // "mango@mail.com"
 //   console.log(mango.accessLevel); // "superuser"
-
+// ========================================================= //
 // Методы дочернего класса
 // Добавь классу Admin следующие свойства и методы.
 
@@ -168,55 +168,56 @@
 // Публичный метод isBlacklisted(email) для проверки почты в чёрном списке. 
 // Метод должен проверять наличие значения параметра email в массиве хранящемся в свойстве blacklistedEmails и возвращать true или false.
 
-class User {
-    email;
+// class User {
+//     email;
   
-    constructor(email) {
-      this.email = email;
-    }
+//     constructor(email) {
+//       this.email = email;
+//     }
   
-    get email() {
-      return this.email;
-    }
+//     get email() {
+//       return this.email;
+//     }
   
-    set email(newEmail) {
-      this.email = newEmail;
-    }
-  }
-  class Admin extends User {
-    // Change code below this line
+//     set email(newEmail) {
+//       this.email = newEmail;
+//     }
+//   }
+//   class Admin extends User {
+//     // Change code below this line
   
-    static AccessLevel = {
-      BASIC: "basic",
-      SUPERUSER: "superuser",
-    };
+//     static AccessLevel = {
+//       BASIC: "basic",
+//       SUPERUSER: "superuser",
+//     };
   
-    constructor({ email, accessLevel }) {
-      super(email);
-      this.accessLevel = accessLevel;
-    }
+//     constructor({ email, accessLevel }) {
+//       super(email);
+//       this.accessLevel = accessLevel;
+//     }
 
-    blacklistedEmails = [];
-    blacklist(email) {
-        this.blacklistedEmails.push(email);
-    }
-    isBlacklisted(email) {
-       return this.blacklistedEmails.includes(email);
-    }
+//     blacklistedEmails = [];
+//     blacklist(email) {
+//         this.blacklistedEmails.push(email);
+//     }
+//     isBlacklisted(email) {
+//        return this.blacklistedEmails.includes(email);
+//     }
   
-    // Change code above this line
-  }
+//     // Change code above this line
+//   }
   
-  const mango = new Admin({
-    email: "mango@mail.com",
-    accessLevel: Admin.AccessLevel.SUPERUSER,
-  });
+//   const mango = new Admin({
+//     email: "mango@mail.com",
+//     accessLevel: Admin.AccessLevel.SUPERUSER,
+//   });
   
-//   console.log(mango.email); // "mango@mail.com"
-//   console.log(mango.accessLevel); // "superuser"
+// //   console.log(mango.email); // "mango@mail.com"
+// //   console.log(mango.accessLevel); // "superuser"
   
-  mango.blacklist("poly@mail.com");
-  console.log(mango.blacklistedEmails); // ["poly@mail.com"]
-  console.log(mango.isBlacklisted("mango@mail.com")); // false
-  console.log(mango.isBlacklisted("poly@mail.com")); // true
-  
+//   mango.blacklist("poly@mail.com");
+//   console.log(mango.blacklistedEmails); // ["poly@mail.com"]
+//   console.log(mango.isBlacklisted("mango@mail.com")); // false
+//   console.log(mango.isBlacklisted("poly@mail.com")); // true
+// ====================================================================== //  
+
